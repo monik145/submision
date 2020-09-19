@@ -30,3 +30,11 @@ int greater(int operand1, int operand2)
     else
         return operand2;
 }
+
+int lesser(int operand1, int operand2)
+{
+    if(operand1<operand2)
+        return operand1;
+    else
+        return operand2;
+}
