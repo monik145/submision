@@ -12,7 +12,7 @@ int calculator_operand1 = 0;
 int calculator_operand2 = 0;
 
 /* Valid operations */
-enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, GREATER, LESSER,ANDGATE,ORGATE,NANDGATE, EXIT };
+enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, GREATER, LESSER,ANDGATE,ORGATE,NANDGATE,NORGATE,ADDER3BIT,SUBTRACTOR3BIT, EXIT };
 
 /* Display the menu of operations supported */
 void calculator_menu(void);
