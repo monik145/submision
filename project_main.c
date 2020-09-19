@@ -12,7 +12,7 @@ int calculator_operand1 = 0;
 int calculator_operand2 = 0;
 
 /* Valid operations */
-enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, GREATER, LESSER, EXIT };
+enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, GREATER, LESSER,ANDGATE,ORGATE,NANDGATE, EXIT };
 
 /* Display the menu of operations supported */
 void calculator_menu(void);
@@ -115,7 +115,36 @@ void calculator_menu(void)
             __fpurge(stdin);
             getchar();
             break;
-        case 7:
+        case ANDGATE:
+            printf("\n\tandgate %d and %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            andgate(calculator_operand1, calculator_operand2));
+            
+            __fpurge(stdin);
+            getchar();
+            break; 
+          case ORGATE:
+            printf("\n\torgate %d and %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            orgate(calculator_operand1, calculator_operand2));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+         case NANDGATE:
+            printf("\n\tnandgate %d and %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            nandgate(calculator_operand1, calculator_operand2));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+          
+            
+        case 10:
             exit(0);
             break;
         default:
