@@ -130,3 +130,127 @@ return 0;
 }
 }
 }
+int norgate(int operand1, int operand2)
+{
+if(operand1 < 0 || operand2 < 0)
+{
+return -1;
+}
+else if (operand1 > 1 || operand2 > 1)
+{
+return 1;
+}
+else
+{
+if(operand1==0 && operand2==0)
+{
+return 1;
+}
+else if(operand1== 0 && operand2==1)
+{
+return 0;
+}
+else if(operand1==1 && operand2==0)
+{
+return 0;
+}
+else if(operand1==1 && operand2==1)
+{
+return 0;
+}
+}
+}
+
+int adder3bit(int operand1, int operand2, int operand3)
+{
+if(operand1 < 0 || operand2 < 0 || operand3 < 0)
+{
+return -1;
+}
+else if (operand1 > 1 || operand2 > 1 || operand3 > 1)
+{
+return -1;
+}
+else
+{
+if(operand1==0 && operand2==0 && operand3==0)
+{
+return 0;
+}
+else if(operand1==0 && operand2==0 && operand3==1)
+{
+return 1;
+}
+else if(operand1==0 && operand2==1 && operand3==0)
+{
+return 1;
+}
+else if(operand1==0 && operand2==1 && operand3==1)
+{
+return 0;
+}
+else if(operand1==1 && operand2==0 && operand3==0)
+{
+return 1;
+}
+else if(operand1==1 && operand2==0 && operand3==1)
+{
+return 0;
+}
+else if(operand1==1 && operand2==1 && operand3==0)
+{
+return 0;
+}
+else if(operand1==1 && operand2==1 && operand3==1)
+{
+return 1;
+}
+}
+}
+
+int subtractor3bit(int operand1, int operand2, int operand3)
+{
+if(operand1 < 0 || operand2 < 0 || operand3 < 0)
+{
+return -1;
+}
+else if (operand1 > 1 || operand2 > 1 || operand3 > 1)
+{
+return -1;
+}
+else
+{
+if(operand1==0 && operand2==0 && operand3==0)
+{
+return 0;
+}
+else if(operand1==0 && operand2==0 && operand3==1)
+{
+return 1;
+}
+else if(operand1==0 && operand2==1 && operand3==0)
+{
+return 1;
+}
+else if(operand1==0 && operand2==1 && operand3==1)
+{
+return 0;
+}
+else if(operand1==1 && operand2==0 && operand3==0)
+{
+return 1;
+}
+else if(operand1==1 && operand2==0 && operand3==1)
+{
+return 0;
+}
+else if(operand1==1 && operand2==1 && operand3==0)
+{
+return 0;
+}
+else if(operand1==1 && operand2==1 && operand3==1)
+{
+return 1;
+}
+}
+} 
