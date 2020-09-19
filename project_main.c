@@ -142,9 +142,41 @@ void calculator_menu(void)
             __fpurge(stdin);
             getchar();
             break;
+         case NORGATE:
+            printf("\n\tnorgate %d and %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            norgate(calculator_operand1, calculator_operand2));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+          case ADDER3BIT:
+            printf("\n\tadder3bit %d and %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            calculator_operand3,
+           adder3bit(calculator_operand1, calculator_operand2,calculator_operand3));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+          case SUBTRACTOR3BIT:
+            printf("\n\tnandgate %d and %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            calculator_operand3,      
+            nandgate(calculator_operand1, calculator_operand2,  calculator_operand3));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+            
+            
+            
           
             
-        case 10:
+        case 13:
             exit(0);
             break;
         default:
