@@ -12,6 +12,9 @@ void test_multiply(void);
 void test_divide(void);
 void test_greater(void);
 void test_lesser(void);
+void test_andgate(void);
+void test_orgate(void);
+void test_nandgate(void);
 
 /* Start of the application test */
 int main() {
@@ -30,6 +33,10 @@ int main() {
   CU_add_test(suite, "divide", test_divide);
   CU_add_test(suite, "greater", test_greater);
   CU_add_test(suite, "lesser", test_lesser);
+  CU_add_test(suite, "andgate", test_andgate);
+  CU_add_test(suite, "orgate", test_orgate);
+  CU_add_test(suite, "nandgate", test_nandgate);
+
 
 
 /* Note: Do not edit START*/
@@ -85,5 +92,23 @@ void test_lesser(void) {
   CU_ASSERT(10 == lesser(10, 20));
   
   /* Dummy fail*/
-  CU_ASSERT(2 == lesser(2, 20));
+  CU_ASSERT(20 == lesser(2, 20));
+}
+void test_andgate(void) {
+  CU_ASSERT(0 == andgate(0, 1));
+  
+  /* Dummy fail*/
+  CU_ASSERT(0 == andgate(1, 1));
+}
+void test_orgate(void) {
+  CU_ASSERT(1 == orgate(1, 0));
+  
+  /* Dummy fail*/
+  CU_ASSERT(0 == orgate(1, 1));
+}
+void test_nandgate(void) {
+  CU_ASSERT(1 == nandgate(1, 0));
+  
+  /* Dummy fail*/
+  CU_ASSERT(0 == nandgate(0, 0));
 }
