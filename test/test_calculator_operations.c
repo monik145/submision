@@ -15,6 +15,10 @@ void test_lesser(void);
 void test_andgate(void);
 void test_orgate(void);
 void test_nandgate(void);
+void test_norgate(void);
+void test_adder3bit(void);
+void test_subtractor3bit(void);
+
 
 /* Start of the application test */
 int main() {
@@ -36,7 +40,9 @@ int main() {
   CU_add_test(suite, "andgate", test_andgate);
   CU_add_test(suite, "orgate", test_orgate);
   CU_add_test(suite, "nandgate", test_nandgate);
-
+   CU_add_test(suite, "norgate", test_nandgate);
+   CU_add_test(suite, "adder3bit", test_nandgate);
+   CU_add_test(suite, "subtractor3bit", test_nandgate);
 
 
 /* Note: Do not edit START*/
@@ -111,4 +117,22 @@ void test_nandgate(void) {
   
   /* Dummy fail*/
   CU_ASSERT(0 == nandgate(0, 0));
+}
+void test_norgate(void) {
+  CU_ASSERT(0 == norgate(1, 0));
+  
+  /* Dummy fail*/
+  CU_ASSERT(0 == norgate(0, 0));
+}
+void test_adder3bit(void) {
+  CU_ASSERT(1 == adder3bit(0,0,1));
+  
+  /* Dummy fail*/
+  CU_ASSERT(0 == adder3bit(0,1,0));
+}
+void test_subtractor3bit(void) {
+  CU_ASSERT(1 == subtractor3bit(0,0,1));
+  
+  /* Dummy fail*/
+  CU_ASSERT(0 == subtractor3bit(0,1,0));
 }
