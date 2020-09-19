@@ -80,5 +80,29 @@ int orgate(int operand1, int operand2);
 * @return integer value of the operand1 < operand2
 */
 int nandgate(int operand1, int operand2);
+/**
+* finds the norgate of two operands
+* @param[in] operand1 
+* @param[in] operand2 
+* @return integer value of the operand1 < operand2
+*/
+int norgate(int operand1, int operand2);
+/**
+* finds the adder3bitgate of two operands
+* @param[in] operand1 
+* @param[in] operand2 
+* @return integer value of the operand1 < operand2
+*/
+int adder3bit(int operand1, int operand2,int operand3);
+/**
+* finds the subtractor3bit of two operands
+* @param[in] operand1 
+* @param[in] operand2 
+* @return integer value of the operand1 < operand2
+*/
+int subtractor3bit(int operand1, int operand2,int operand3);
+
+
+
 
 #endif  /* #define __CALCULATOR_OPERATIONS_H__ */
