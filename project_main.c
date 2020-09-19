@@ -12,7 +12,7 @@ int calculator_operand1 = 0;
 int calculator_operand2 = 0;
 
 /* Valid operations */
-enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, GREATER, LESSER,ANDGATE,ORGATE,NANDGATE, EXIT };
+enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, GREATER, LESSER,ANDGATE,ORGATE,NANDGATE,NORGATE,ADDER3BIT,SUBTRACTOR3BIT, EXIT };
 
 /* Display the menu of operations supported */
 void calculator_menu(void);
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 void calculator_menu(void)
 {
     printf("\nAvailable Operations\n");
-    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Greater\n6. Lesser\n7. Exit");
+    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Greater\n6. Lesser\n7.Andgate\n8.Orgate\n9.Nandgate\n10.Norgate\n11.Adder3bit\n12.Subtractor3bit\n13.Exit");
     printf("\n\tEnter your choice\n");
    
      __fpurge(stdin);
